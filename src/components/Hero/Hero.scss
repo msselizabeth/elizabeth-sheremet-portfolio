@@ -1,0 +1,98 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.hero {
+    position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 1.5rem 1.75rem;
+  &::before, &::after{
+    content: "";
+    position: absolute;
+    top: 30%;
+    left: 25%;
+    width: 9.375rem;
+    height: 9.375rem;
+    border-radius: 50%;
+    background-color: var(--purple-blur);
+    filter: blur(120px);
+  }
+  &::after{
+    top: 60%;
+    left: 40%;
+    background-color: var(--pink-blur);
+  }
+  @include tablet{
+    flex-direction: row;
+    height: 95%;
+    // height: 100%;
+    // align-items: center;
+  }
+  &__image {
+    display: block;
+    width: 11.875rem;
+    height: 11.875rem;
+    border-radius: 50%;
+    align-self: center;
+    z-index: 100;
+  }
+
+  &__content{
+    height: 50%;
+    display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  @include tablet{
+    height: 60%;
+    align-self: flex-end;
+    width: 50%;
+    margin-bottom: 1rem;
+  }
+  }
+  &__personal-info {
+    // padding-left: 1.585rem;
+    // padding-right: 2.8125rem;
+    z-index: 100;
+    color: var(--hero-text-color);
+    font-size: 1.125rem;
+
+    &--name {
+        font-size: 2.85rem;
+        font-weight: 400;
+      }
+      &--role {
+        color: var(--hero-accent-color);
+      }
+  }
+
+
+  &__github {
+    z-index: 100;
+    // padding-left: 1.585rem;
+    // padding-right: 2.8125rem;
+    &-comment {
+      margin-bottom: 0.75rem;
+    }
+    &-link {
+      word-wrap: break-word;
+    }
+    &-var {
+      color: var(--const-color);
+    }
+    &-name {
+      color: var(--hero-accent-color);
+    }
+    &-equal {
+      color: var(--hero-text-color);
+    }
+    &-value {
+      color: var(--value-color);
+      word-wrap: break-word;
+    }
+  }
+}
+
+span {
+  margin-right: 0.3125rem;
+}

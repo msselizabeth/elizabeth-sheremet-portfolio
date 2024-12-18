@@ -1,6 +1,8 @@
 // import ThemeToggle from "./components/ToggleTheme/ToggleTheme";
 import "./App.scss"
+import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
+import Hero from "./components/Hero/Hero";
 
 const App = () => {
 
@@ -8,8 +10,10 @@ const App = () => {
     <div className="root__container">
       {/* <ThemeToggle /> */}
       <Header />
-      <h1>Portfolio</h1>
-      <p>vhgvch gcvh guy</p>
+      <main>
+      <Hero />
+      </main>
+      <Footer />
     </div>
   );
 };
