@@ -2,12 +2,14 @@
 @use "../../styles/partials/variables" as *;
 
 .hero {
-    position: relative;
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  padding: 1.5rem 1.75rem;
-  &::before, &::after{
+  gap: 3.125rem;
+ 
+  &::before,
+  &::after {
     content: "";
     position: absolute;
     top: 30%;
@@ -18,16 +20,28 @@
     background-color: var(--purple-blur);
     filter: blur(120px);
   }
-  &::after{
+  &::after {
     top: 60%;
     left: 40%;
     background-color: var(--pink-blur);
   }
-  @include tablet{
+  @include tablet {
+    padding-top: 2.5rem;
     flex-direction: row;
-    height: 95%;
-    // height: 100%;
-    // align-items: center;
+   justify-content: center;
+    align-items: center;
+    gap: 3.125rem;
+    &::before {
+        top: 25%;
+        left: 35%;
+      }
+    &::after {
+        top: 55%;
+        left: 55%;
+      }
+  }
+  @include desktop{
+    gap: 5rem;
   }
   &__image {
     display: block;
@@ -36,41 +50,58 @@
     border-radius: 50%;
     align-self: center;
     z-index: 100;
+    @include tablet{
+        width: 13.75rem;
+        height: 13.75rem;
+    }
+    @include desktop{
+        width: 21.875rem;
+        height: 21.875rem;
+    }
   }
 
-  &__content{
-    height: 50%;
+  &__content {
+    // height: 45%;
     display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  @include tablet{
-    height: 60%;
-    align-self: flex-end;
-    width: 50%;
-    margin-bottom: 1rem;
-  }
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 3.125rem;
+
+    @include tablet {
+      width: 47%;
+      height: 45%;
+    //   margin: 0 auto;
+    }
+    @include desktop {
+        width: 45%;
+        height: auto;
+    }
   }
   &__personal-info {
-    // padding-left: 1.585rem;
-    // padding-right: 2.8125rem;
     z-index: 100;
     color: var(--hero-text-color);
     font-size: 1.125rem;
-
+    @include desktop{
+        font-size: 1.25rem;
+    }
     &--name {
-        font-size: 2.85rem;
-        font-weight: 400;
+      font-size: 2.85rem;
+      font-weight: 400;
+      @include desktop{
+        font-size: 3.4375rem;
       }
-      &--role {
-        color: var(--hero-accent-color);
+    }
+    &--role {
+      color: var(--hero-accent-color);
+      @include desktop{
+        font-size: 2rem;
       }
+    }
   }
-
 
   &__github {
     z-index: 100;
-    // padding-left: 1.585rem;
-    // padding-right: 2.8125rem;
+
     &-comment {
       margin-bottom: 0.75rem;
     }
