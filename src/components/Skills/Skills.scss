@@ -1,0 +1,32 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.icon{
+    width: 3.125rem;
+    height: 3.125rem;
+}
+
+.skills{
+    @include tablet{
+        width: 35%;
+    }
+
+    &__list{
+        flex-wrap: wrap;
+        @include flex-center;
+        gap: 1.5rem;
+    }
+    &__item{
+        @include flex-center;
+        flex-direction: column;
+        gap: .25rem;
+    }
+}
+    
+    .open-ai path{
+        fill: white;
+    }
+
+    .nextjs path{
+        fill: white;
+    }

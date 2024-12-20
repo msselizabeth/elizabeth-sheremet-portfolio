@@ -3,7 +3,6 @@ import {
   RiGithubFill,
   RiInstagramFill,
   RiLinkedinFill,
-  RiMenuLine,
 } from "@remixicon/react";
 
 export default function Footer() {
