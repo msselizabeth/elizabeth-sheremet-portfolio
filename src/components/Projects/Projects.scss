@@ -8,14 +8,13 @@
         gap: 1.25rem;
         @include tablet{
             flex-direction: row;
+            gap: 1.5rem;
+        }
+        @include desktop{
+            flex-direction: row;
+            gap: 3.5rem;
         }
     }
-    // &__item{
-    //     @include tablet{
-    //         display: flex;
-    //         gap: .9375rem;
-    //     }
-    // }
     &__item{
         width: 48.5%;
     }
@@ -31,6 +30,9 @@
         border-radius: .625rem;
         @include tablet{
             height: 19rem;
+        }
+        @include desktop{
+            height: 33rem;
         }
         
     }

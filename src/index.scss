@@ -75,6 +75,12 @@ main {
     margin-bottom: 0.75rem;
     font-size: 1.125rem;
     color: var(--hero-text-color);
+    @include tablet{
+      margin-bottom: 1rem;
+    }
+    @include desktop{
+      margin-bottom: 1.5rem;
+    }
   }
 
   
