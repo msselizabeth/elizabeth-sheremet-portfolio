@@ -1,0 +1,14 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.show-more-button {
+  cursor: pointer;
+
+  color: var(--show-more-btn-color);
+  text-decoration: underline;
+  margin-top: 5px;
+  background-color: transparent;
+  border: 0;
+  display: inline-block;
+  font-family: "Fira Code", sans-serif;
+}
