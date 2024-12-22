@@ -1,0 +1,84 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $bg-primary;
+  display: flex;
+  flex-direction: column;
+  z-index: 1000;
+ 
+  &__container {
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    border-radius: 0.625rem;
+    height: 100%;
+    border: 1px solid $main-border;
+    background-color: $bg-secondary;
+    @include desktop {
+      margin: 2rem;
+    }
+  }
+  &__nav {
+    flex: 1;
+  }
+
+  &__header {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      border: 0.8px solid $text-color;
+    }
+    &__logo {
+      color: $text-color;
+    }
+  }
+ &__button{
+  padding: 1rem;
+  @include desktop{
+    display: none;
+}
+ }
+  &__open,
+  &__close {
+    
+    color: $text-color;
+    transition: $transition;
+    @include desktop{
+        display: none;
+    }
+    &:hover,
+    &:focus {
+      color: $hover-color;
+    }
+  }
+
+  &__link {
+    position: relative;
+    display: block;
+    color: $hero-text-color;
+    padding: 1.125rem;
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        border: 0.8px solid $text-color;
+      }
+  }
+}

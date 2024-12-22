@@ -8,15 +8,12 @@ This portfolio showcases my journey as a software engineer and highlights the sk
 
 	-	About Me: Learn more about my background, experiences, and career path.
 	-	Projects: A showcase of my work, including detailed descriptions, technologies used, and links to live demos or repositories.
-	-	Tech Stack: A dedicated section showcasing the technologies and tools I use, including programming languages, frameworks, and libraries.
-	-	Icons and Interactivity: Includes sleek icons from Remix Icon and carousel effects using Swiper.js for smooth navigation.
-	-	Contact: Easy ways to get in touch with me for collaborations, opportunities, or just a friendly chat!
+	-	Skills: A dedicated section showcasing the technologies and tools I use, including programming languages, frameworks, and libraries.
 
 ## Technologies Used
-	-	Frontend: React.js, React Router DOM (Dynamic Routing), React Helmet (SEO),  Vite (for fast builds)
-	-	Styling: CSS Modules / SCSS for modular and maintainable styles
+	-	Frontend: React.js, React Helmet (SEO),  Vite (for fast builds)
+	-	Styling: CSS / SCSS for maintainable styles
 	-	Icon Library: Remix Icon for beautiful, scalable icons
-	-	Interactive Features: Swiper.js for modern, responsive carousels
 	-	Deployment: Hosted on Vercel
 
 ## Purpose

@@ -4,7 +4,7 @@
 .show-more-button {
   cursor: pointer;
 
-  color: var(--show-more-btn-color);
+  color: $show-more-btn-color;
   text-decoration: underline;
   margin-top: 5px;
   background-color: transparent;

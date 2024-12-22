@@ -10,7 +10,7 @@
       flex-direction: column;
       align-items: flex-start;
       background-color: #011221;
-      border: 1px solid var(--project-item-border);
+      border: 1px solid $project-item-border;
       border-top: 0;
       border-radius: 0.625rem;
       border-top-left-radius: 0;
@@ -22,14 +22,14 @@
       width: calc(100% / 2 - 0.75rem);
     }
     @include desktop {
-      width: calc(100% / 3 - 1.5rem);
+      width: calc(100% / 3 - 2.5rem);
     }
   }
   &__image {
     display: block;
     width: 100%;
     height: auto;
-    border: 1px solid var(--project-item-border);
+    border: 1px solid $project-item-border;
 
     border-radius: 0.625rem;
     @include tablet {
@@ -46,10 +46,10 @@
   }
   &__title {
     margin-bottom: 1rem;
-    color: var(--hero-text-color);
+    color: $hero-text-color;
   }
   &__link {
-    color: var(--hero-text-color);
+    color: $hero-text-color;
   }
 
   &__description {
@@ -58,12 +58,13 @@
       padding: 0.25rem;
       text-indent: 1.25rem;
       overflow: hidden;
-      transition: max-height 0.3s ease;
+      transition: $transition;
       max-height: 4rem;
     }
   }
 }
 
 .project__description-text.expanded {
+  transition: $transition;
   max-height: none;
 }

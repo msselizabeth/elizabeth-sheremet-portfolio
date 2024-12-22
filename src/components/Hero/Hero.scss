@@ -7,7 +7,7 @@
   flex-direction: column;
   justify-content: space-around;
   gap: 3.125rem;
- 
+
   &::before,
   &::after {
     content: "";
@@ -17,30 +17,30 @@
     width: 9.375rem;
     height: 9.375rem;
     border-radius: 50%;
-    background-color: var(--purple-blur);
+    background-color: $purple-blur;
     filter: blur(120px);
   }
   &::after {
     top: 60%;
     left: 40%;
-    background-color: var(--pink-blur);
+    background-color: $pink-blur;
   }
   @include tablet {
     padding-top: 2.5rem;
     flex-direction: row;
-   justify-content: center;
+    justify-content: center;
     align-items: center;
     gap: 3.125rem;
     &::before {
-        top: 25%;
-        left: 35%;
-      }
+      top: 25%;
+      left: 35%;
+    }
     &::after {
-        top: 55%;
-        left: 55%;
-      }
+      top: 55%;
+      left: 55%;
+    }
   }
-  @include desktop{
+  @include desktop {
     gap: 5rem;
   }
   &__image {
@@ -50,13 +50,13 @@
     border-radius: 50%;
     align-self: center;
     z-index: 100;
-    @include tablet{
-        width: 13.75rem;
-        height: 13.75rem;
+    @include tablet {
+      width: 13.75rem;
+      height: 13.75rem;
     }
-    @include desktop{
-        width: 21.875rem;
-        height: 21.875rem;
+    @include desktop {
+      width: 21.875rem;
+      height: 21.875rem;
     }
   }
 
@@ -70,30 +70,30 @@
     @include tablet {
       width: 47%;
       height: 45%;
-    //   margin: 0 auto;
+      //   margin: 0 auto;
     }
     @include desktop {
-        width: 45%;
-        height: auto;
+      width: 45%;
+      height: auto;
     }
   }
   &__personal-info {
     z-index: 100;
-    color: var(--hero-text-color);
+    color: $hero-text-color;
     font-size: 1.125rem;
-    @include desktop{
-        font-size: 1.25rem;
+    @include desktop {
+      font-size: 1.25rem;
     }
     &--name {
       font-size: 2.85rem;
       font-weight: 400;
-      @include desktop{
+      @include desktop {
         font-size: 3.4375rem;
       }
     }
     &--role {
-      color: var(--hero-accent-color);
-      @include desktop{
+      color: $hero-accent-color;
+      @include desktop {
         font-size: 2rem;
       }
     }
@@ -109,16 +109,16 @@
       word-wrap: break-word;
     }
     &-var {
-      color: var(--const-color);
+      color: $const-color;
     }
     &-name {
-      color: var(--hero-accent-color);
+      color: $hero-accent-color;
     }
     &-equal {
-      color: var(--hero-text-color);
+      color: $hero-text-color;
     }
     &-value {
-      color: var(--value-color);
+      color: $value-color;
       word-wrap: break-word;
     }
   }

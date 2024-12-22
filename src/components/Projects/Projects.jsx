@@ -4,7 +4,7 @@ import ProjectItem from "../ProjectItem/ProjectItem";
 
 export default function Projects() {
   return (
-    <section className="section">
+    <section className="section" id="projects">
     <h2 className="section-title">// Projects</h2>
     <ul className="projects__list">
       {projects.map((project, index) => (
