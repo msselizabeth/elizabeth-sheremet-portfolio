@@ -26,30 +26,31 @@ button {
 }
 body {
   background-color: $bg-primary;
+  // background-color: #222222;
   color: $text-color;
-  font-family: "Fira Code", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 400;
-  font-size: 0.875rem;
+  font-size: 1rem;
   @include desktop {
     font-size: 1rem;
   }
 }
 
-.root__container {
-  margin: 1rem;
-  display: flex;
-  flex-direction: column;
-  border-radius: 0.625rem;
-  border: 1px solid $main-border;
-  background-color: $bg-secondary;
-  @include desktop {
-    margin: 2rem;
-  }
-}
+// .root__container {
+//   margin: 1rem;
+//   display: flex;
+//   flex-direction: column;
+//   border-radius: 0.625rem;
+//   border: 1px solid $main-border;
+//   background-color: $bg-secondary;
+//   @include desktop {
+//     margin: 2rem;
+//   }
+// }
 
-main {
-  flex: 1;
-}
+// main {
+//   flex: 1;
+// }
 
 .section {
   padding: 1.75rem 1rem;
