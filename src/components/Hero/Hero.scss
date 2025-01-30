@@ -146,6 +146,11 @@
 
 
 .video {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  border: 6px solid $gray-800;
+
   &__container {
     width: 80%;
     margin: 0 auto;
@@ -157,8 +162,4 @@
       width: 30%;
     }
   }
-  width: 100%;
-  height: auto;
-  border-radius: 50%;
-  border: 6px solid $gray-800;
 }
