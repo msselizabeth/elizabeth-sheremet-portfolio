@@ -1,15 +1,15 @@
+import Logo from "../Logo/Logo";
 import MobileMenu from "../MobileMenu/MobileMenu";
 import "./Header.scss";
 
 export default function Header() {
   return (
     <header className="header">
-      <a href="/" className="header__logo">
-        elizabeth-sheremet
-      </a>
+     <Logo />
+
       <MobileMenu />
 
-      <nav className="header__nav">
+      {/* <nav className="header__nav">
         <ul className="header__list">
           <li>
             <a href="#home" className="header__link">
@@ -32,7 +32,7 @@ export default function Header() {
             </a>
           </li>
         </ul>
-      </nav>
+      </nav> */}
     </header>
   );
 }

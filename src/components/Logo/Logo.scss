@@ -1,0 +1,23 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: .3125rem;
+    color: $white;
+
+    &-icon {
+      padding: 0.5rem;
+      border-radius: 50%;
+      background-color: $blue-500;
+      font-size: 1.25rem;
+      font-family: "Ribeye";
+    }
+    &-text{
+      font-size: 1.25rem;
+      &--highlight{
+        font-weight: 600;
+      }
+    }
+  }
