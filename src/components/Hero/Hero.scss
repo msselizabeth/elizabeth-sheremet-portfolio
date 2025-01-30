@@ -2,128 +2,163 @@
 @use "../../styles/partials/variables" as *;
 
 .hero {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  gap: 3.125rem;
-
-  &::before,
-  &::after {
-    content: "";
-    position: absolute;
-    top: 30%;
-    left: 25%;
-    width: 9.375rem;
-    height: 9.375rem;
-    border-radius: 50%;
-    background-color: $purple-blur;
-    filter: blur(120px);
-  }
-  &::after {
-    top: 60%;
-    left: 40%;
-    background-color: $pink-blur;
-  }
-  @include tablet {
-    padding-top: 2.5rem;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 3.125rem;
-    &::before {
-      top: 25%;
-      left: 35%;
+  &__part-one {
+    position: relative;
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 43%;
+      left: 5%;
+      width: 8rem;
+      height: 8rem;
+      border-radius: 50%;
+      background-color: $purple-blur;
+      filter: blur(90px);
     }
     &::after {
-      top: 55%;
-      left: 55%;
+      top: 49%;
+      left: 60%;
+      background-color: $pink-blur;
+    }
+
+    @include tablet {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1.5rem;
+      
+
+      &::before {
+        top: 25%;
+        left: 35%;
+      }
+      &::after {
+        top: 55%;
+        left: 55%;
+      }
     }
   }
-  @include desktop {
-    gap: 5rem;
+
+  &__action-container {
+    @include flex-center;
+    gap: 1.5rem;
+    margin: 1rem 0;
+    @include desktop{
+      width: 60%;
+    }
   }
+
+  &__action-link {
+    @include flex-center;
+    width: 50%;
+    padding: 0.75rem;
+    border-radius: 1.5rem;
+    border: 2px solid $white;
+    color: $white;
+    transition: $transition;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.8);
+    &:hover, &:focus {
+      border-color: $blue-500;
+      color: $blue-500;
+    }
+  }
+
+  &__part-two {
+    @include desktop {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: center;
+      align-items: center;
+      gap: 1.5rem;
+    }
+  }
+
   &__image {
     display: block;
-    width: 11.875rem;
-    height: 11.875rem;
+    width: 100%;
+    height: auto;
     border-radius: 50%;
-    align-self: center;
-    z-index: 100;
-    @include tablet {
-      width: 13.75rem;
-      height: 13.75rem;
-    }
-    @include desktop {
-      width: 21.875rem;
-      height: 21.875rem;
+    border: 6px solid $gray-800;
+
+    &-container {
+      width: 80%;
+      height: auto;
+      margin: 0 auto;
+      z-index: 100;
+      @include tablet {
+        width: 40%;
+        float: right;
+        margin-left: 0.75rem;
+      }
+      @include desktop {
+          width: 30%;
+          float: none;
+          margin: 0;
+      }
     }
   }
 
   &__content {
-    // height: 45%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 3.125rem;
-
-    @include tablet {
-      width: 47%;
-      height: 45%;
-      //   margin: 0 auto;
-    }
-    @include desktop {
-      width: 45%;
-      height: auto;
-    }
-  }
-  &__personal-info {
     z-index: 100;
-    color: $hero-text-color;
-    font-size: 1.125rem;
-    @include desktop {
-      font-size: 1.25rem;
+    color: $gray-200;
+
+    &-part-one{
+      @include tablet {
+        width: 55%;
+      }
     }
-    &--name {
-      font-size: 2.85rem;
-      font-weight: 400;
+   
+    &-part-two{
+      margin-top: 1rem;
+      @include desktop {
+        width: 55%;
+        margin-top: 1.5rem;
+      }
+    }
+
+    &-name {
+      font-size: 1.85rem;
+      font-weight: 500;
+      margin-bottom: 1rem;
       @include desktop {
         font-size: 3.4375rem;
       }
     }
-    &--role {
-      color: $hero-accent-color;
+    &-role {
+      font-size: 1.55rem;
+      color: $white-50;
+      letter-spacing: 0.2rem;
       @include desktop {
         font-size: 2rem;
       }
     }
-  }
-
-  &__github {
-    z-index: 100;
-
-    &-comment {
+    &-greeting {
+      font-size: 1.0625rem;
       margin-bottom: 0.75rem;
     }
-    &-link {
-      word-wrap: break-word;
-    }
-    &-var {
-      color: $const-color;
-    }
-    &-name {
-      color: $hero-accent-color;
-    }
-    &-equal {
-      color: $hero-text-color;
-    }
-    &-value {
-      color: $value-color;
-      word-wrap: break-word;
+    &-text {
+      margin-bottom: 0.5rem;
     }
   }
 }
 
-span {
-  margin-right: 0.3125rem;
+
+
+.video {
+  &__container {
+    width: 80%;
+    margin: 0 auto;
+    @include tablet {
+      width: 45%;
+      margin: 0;
+    }
+    @include desktop {
+      width: 30%;
+    }
+  }
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  border: 6px solid $gray-800;
 }

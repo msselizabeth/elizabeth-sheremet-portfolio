@@ -1,4 +1,3 @@
-
 $bg-primary: #010c15;
 $bg-secondary: #011627;
 $text-color: #607b96;
@@ -6,14 +5,20 @@ $hero-text-color: #e5e9f0;
 $hero-accent-color: #43d9ad;
 $const-color: #4d5bce;
 $value-color: #e99287;
-$purple-blur: #5565e8;
-$pink-blur: #c98bdf;
+$purple-blur: #5566e8db;
+$pink-blur: #c98bdfdc;
 
 $main-border: #1e2d3d;
 
-$project-item-border: #1E2D3D;
+$project-item-border: #1e2d3d;
 $show-more-btn-color: #e99287;
 $hover-color: #ffffff;
+
+$white: #ffffff;
+$white-50: rgba(255, 255, 255, 0.5);
+$gray-200: #d9d9d9;
+$gray-800: #444444;
+$blue-500: #007CED;
 
 // breakpoints
 $tablet-breakpoint: 768px;
@@ -21,4 +26,3 @@ $desktop-breakpoint: 1280px;
 
 // animation
 $transition: all 0.3s ease-in-out;
-

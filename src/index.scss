@@ -25,31 +25,34 @@ button {
   @include flex-center;
 }
 body {
-  background-color: $bg-primary;
-  color: $text-color;
-  font-family: "Fira Code", sans-serif;
-  font-weight: 400;
-  font-size: 0.875rem;
-  @include desktop {
-    font-size: 1rem;
-  }
-}
-
-.root__container {
-  margin: 1rem;
-  display: flex;
-  flex-direction: column;
-  border-radius: 0.625rem;
-  border: 1px solid $main-border;
   background-color: $bg-secondary;
-  @include desktop {
-    margin: 2rem;
+  color: $text-color;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 0.85rem;
+  @include tablet{
+    font-size: .9375rem;
+  }
+  @include desktop{
+    font-size: 1.0313rem;
   }
 }
 
-main {
-  flex: 1;
-}
+// .root__container {
+//   margin: 1rem;
+//   display: flex;
+//   flex-direction: column;
+//   border-radius: 0.625rem;
+//   border: 1px solid $main-border;
+//   background-color: $bg-secondary;
+//   @include desktop {
+//     margin: 2rem;
+//   }
+// }
+
+// main {
+//   flex: 1;
+// }
 
 .section {
   padding: 1.75rem 1rem;
