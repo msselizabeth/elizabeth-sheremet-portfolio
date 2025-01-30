@@ -7,25 +7,47 @@
   right: 0;
   width: 100%;
   height: 100%;
-  background-color: $bg-primary;
   display: flex;
   flex-direction: column;
   z-index: 1000;
- 
+
   &__container {
-    margin: 1rem;
     display: flex;
     flex-direction: column;
     border-radius: 0.625rem;
     height: 100%;
-    border: 1px solid $main-border;
+    
     background-color: $bg-secondary;
-    @include desktop {
-      margin: 2rem;
-    }
+  
   }
   &__nav {
+    position: relative;
     flex: 1;
+    align-content: center;
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 18%;
+      left: 8%;
+      width: 8rem;
+      height: 8rem;
+      border-radius: 50%;
+      background-color: $purple-blur;
+      filter: blur(90px);
+    }
+    &::after {
+      top: 47%;
+      left: 58%;
+      background-color: $pink-blur;
+    }
+  }
+  &__list{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
   }
 
   &__header {
@@ -33,32 +55,22 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    &::after {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 1px;
-      border: 0.8px solid $text-color;
-    }
-    &__logo {
-      color: $text-color;
+    padding: 1rem;
+  
+  }
+  &__button {
+    padding: 1rem;
+    @include desktop {
+      display: none;
     }
   }
- &__button{
-  padding: 1rem;
-  @include desktop{
-    display: none;
-}
- }
+  
   &__open,
   &__close {
-    
-    color: $text-color;
+    color: $white;
     transition: $transition;
-    @include desktop{
-        display: none;
+    @include desktop {
+      display: none;
     }
     &:hover,
     &:focus {
@@ -69,16 +81,26 @@
   &__link {
     position: relative;
     display: block;
-    color: $hero-text-color;
-    padding: 1.125rem;
-    &::after {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 1px;
-        border: 0.8px solid $text-color;
-      }
+    color: $white-50;
+    // padding: 1.125rem;
+    font-size: 1.125rem;
+  
+  }
+
+  &__footer{
+    position: relative;
+    text-align: center;
+    padding: 1rem;
+    color: $white-80;
+
+    &::before{
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 1px;
+      border-bottom: 0.75px solid $gray-700;
+    }
   }
 }
