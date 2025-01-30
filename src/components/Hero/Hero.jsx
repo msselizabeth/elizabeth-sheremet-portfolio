@@ -7,7 +7,7 @@ export default function Hero() {
       <div className="hero__part-one">
         <div className="video__container">
           <video
-            src="/public/portfolio-video.webm"
+            src="/portfolio-video.webm"
             autoPlay
             loop
             muted
