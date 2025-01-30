@@ -3,26 +3,26 @@
 
 .hero {
   position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  gap: 3.125rem;
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: space-around;
+  // gap: 3.125rem;
 
   &::before,
   &::after {
     content: "";
     position: absolute;
-    top: 30%;
-    left: 25%;
-    width: 9.375rem;
-    height: 9.375rem;
+    top: 53%;
+    left: 9%;
+    width: 8rem;
+    height: 8rem;
     border-radius: 50%;
     background-color: $purple-blur;
-    filter: blur(120px);
+    filter: blur(90px);
   }
   &::after {
     top: 60%;
-    left: 40%;
+    left: 58%;
     background-color: $pink-blur;
   }
   @include tablet {
@@ -61,66 +61,48 @@
   }
 
   &__content {
-    // height: 45%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: 3.125rem;
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+    color: $gray-200;
 
     @include tablet {
       width: 47%;
       height: 45%;
-      //   margin: 0 auto;
     }
     @include desktop {
       width: 45%;
       height: auto;
     }
   }
+
   &__personal-info {
     z-index: 100;
-    color: $hero-text-color;
-    font-size: 1.125rem;
+    color: $white;
     @include desktop {
       font-size: 1.25rem;
     }
     &--name {
-      font-size: 2.85rem;
-      font-weight: 400;
+      font-size: 1.85rem;
+      font-weight: 500;
       @include desktop {
         font-size: 3.4375rem;
       }
     }
     &--role {
-      color: $hero-accent-color;
+      font-size: 1.55rem;
+      color: $white-50;
+      letter-spacing: 0.2rem;
       @include desktop {
         font-size: 2rem;
       }
     }
   }
 
-  &__github {
-    z-index: 100;
-
-    &-comment {
-      margin-bottom: 0.75rem;
-    }
-    &-link {
-      word-wrap: break-word;
-    }
-    &-var {
-      color: $const-color;
-    }
-    &-name {
-      color: $hero-accent-color;
-    }
-    &-equal {
-      color: $hero-text-color;
-    }
-    &-value {
-      color: $value-color;
-      word-wrap: break-word;
-    }
+  &-greeting{
+    font-size: 1.125rem;
   }
 }
 
@@ -130,8 +112,13 @@ span {
 
 
 .video{
+  &__container{
+    width: 80%;
+    margin: 0 auto;
+  }
   width: 100%;
   height: auto;
+ 
   border-radius: 50%;
   border: 6px solid $gray-800;
 }

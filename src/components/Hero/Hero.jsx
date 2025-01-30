@@ -1,6 +1,5 @@
 import "./Hero.scss";
 
-
 export default function Hero() {
   return (
     <section className="section hero">
@@ -10,7 +9,7 @@ export default function Hero() {
         className="hero__image"
       /> */}
 
-      <div>
+      <div className="video__container">
         <video
           src="/public/portfolio-video.webm"
           autoPlay
@@ -24,25 +23,21 @@ export default function Hero() {
 
       <div className="hero__content">
         <div className="hero__personal-info">
-          <p>Hi all. I am</p>
+          <p className="hero__personal-info--role">Software Engineer</p>
           <h1 className="hero__personal-info--name">Elizabeth Sheremet</h1>
-          <p className="hero__personal-info--role">&gt; Software Engineer</p>
         </div>
 
-        <div className="hero__github">
-          <p className="hero__github-comment">// find my profile on Github:</p>
-          <a
-            className="hero__github-link"
-            href="https://github.com/msselizabeth"
-            target="_blank">
-            <span className="hero__github-var">const</span>
-            <span className="hero__github-name">githubLink</span>
-            <span className="hero__github-equal">=</span>
-            <span className="hero__github-value">
-              "https://github.com/msselizabeth"
-            </span>
-          </a>
-        </div>
+        <p className="hero__content-greeting">Welcome to my page 👋</p>
+
+        <p>
+          My name is Elizabeth, and I am passionate about developing
+          user-focused applications that deliver convenient and intuitive
+          experiences. With a goal to solve complex problems, I use innovative
+          technologies and modern approaches to development. I'm eaget to bring
+          various design concepts, as well as reliable and efficient server
+          solutions to life ensures interfaces are attractive, effective and
+          user-friendly.
+        </p>
       </div>
     </section>
   );
