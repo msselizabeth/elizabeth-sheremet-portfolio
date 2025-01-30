@@ -25,14 +25,16 @@ button {
   @include flex-center;
 }
 body {
-  background-color: $bg-primary;
-  // background-color: #222222;
+  background-color: $bg-secondary;
   color: $text-color;
   font-family: "Poppins", sans-serif;
   font-weight: 400;
-  font-size: 1rem;
-  @include desktop {
-    font-size: 1rem;
+  font-size: 0.85rem;
+  @include tablet{
+    font-size: .9375rem;
+  }
+  @include desktop{
+    font-size: 1.0313rem;
   }
 }
 
