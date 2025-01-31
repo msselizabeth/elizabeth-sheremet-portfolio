@@ -59,8 +59,7 @@
   
   }
   &__button {
-    padding: 1rem;
-    @include desktop {
+    @include tablet {
       display: none;
     }
   }
