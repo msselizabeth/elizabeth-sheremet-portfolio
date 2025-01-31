@@ -1,32 +1,195 @@
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/variables" as *;
 
-.icon{
-    width: 3.125rem;
-    height: 3.125rem;
+.skills-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  @include tablet {
+    gap: 1.75rem;
+  }
+  @include desktop {
+    width: 65%;
+  }
 }
 
-.skills{
-    @include tablet{
-        width: 35%;
+.skill {
+  &__title {
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
+    color: $white;
+  }
+  &__list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    column-gap: 0.5rem;
+    row-gap: 1rem;
+    padding-left: 1.5rem;
+    padding-top: 0.75rem;
+    @include tablet {
+      padding-left: 2rem;
+      column-gap: 0.75rem;
     }
+  }
+  &__item {
+    color: $white-80;
+    width: 4.5rem;
+    font-size: 0.75rem;
+    @include flex-center;
+    flex-direction: column;
 
-    &__list{
-        flex-wrap: wrap;
-        @include flex-center;
-        gap: 1.5rem;
+    gap: 0.25rem;
+    @include tablet {
+      width: 5.5rem;
+      height: 4.6875rem;
+      font-size: 0.875rem;
     }
-    &__item{
-        @include flex-center;
-        flex-direction: column;
-        gap: .25rem;
-    }
+  }
 }
-    
-    .open-ai path{
-        fill: white;
-    }
+.skills {
+  padding: 1.5rem 1rem;
+  width: 100%;
+  max-width: 76.5rem;
+  margin: 0 auto;
+  @include tablet {
+    padding: 2rem 1.5rem;
+  }
+  @include desktop {
+    padding: 3rem 1.75rem;
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 2rem;
+    max-width: 75rem;
+    margin: 0 auto;
+    // overflow: hidden;
+  }
+}
 
-    .nextjs path{
-        fill: white;
-    }
+#skills {
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+// icons styles
+.icon {
+  width: 3.125rem;
+  height: 3.125rem;
+  @include desktop {
+    width: 4rem;
+    height: 4rem;
+  }
+}
+.open-ai path {
+  fill: $white;
+}
+.nextjs path:first-of-type {
+  fill: $white;
+}
+.nextjs path {
+  fill: black;
+}
+.prisma path {
+  fill: $white;
+}
+.github path {
+  fill: $white;
+}
+.aws path:first-of-type {
+  fill: $white;
+}
+
+// Background video
+.skills__video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.skills__video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+// 3D cude styles
+.cube-container {
+  position: relative;
+  perspective: 800px;
+  width: 100%;
+  height: 400px;
+  padding-top: 9.5rem;
+
+  @include desktop {
+    width: 30%;
+    height: 31.25rem;
+    align-self: center;
+  }
+}
+
+.cube {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+  position: relative;
+  transform-style: preserve-3d;
+  @include desktop {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+.side {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  @include flex-center;
+  flex-wrap: wrap;
+  padding: 1rem;
+  gap: 1.5rem;
+  background-color: #0b012897;
+  border: 2px solid $blue-800;
+  @include desktop {
+    gap: 1.75rem;
+  }
+}
+
+.front {
+  transform: rotateY(0deg) translateZ(100px);
+  @include desktop {
+    transform: translateZ(125px);
+  }
+}
+.right {
+  transform: rotateY(90deg) translateZ(100px);
+  @include desktop {
+    transform: translateZ(125px);
+  }
+}
+.back {
+  transform: rotateY(180deg) translateZ(100px);
+  @include desktop {
+    transform: translateZ(125px);
+  }
+}
+.left {
+  transform: rotateY(-90deg) translateZ(100px);
+  @include desktop {
+    transform: translateZ(125px);
+  }
+}
+.top {
+  transform: rotateX(90deg) translateZ(100px);
+  @include desktop {
+    transform: translateZ(125px);
+  }
+}
+.bottom {
+  transform: rotateX(-90deg) translateZ(100px);
+  @include desktop {
+    transform: translateZ(125px);
+  }
+}
