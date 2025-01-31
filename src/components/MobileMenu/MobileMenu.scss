@@ -28,8 +28,8 @@
     &::after {
       content: "";
       position: absolute;
-      top: 18%;
-      left: 8%;
+      top: 35%;
+      left: 12%;
       width: 8rem;
       height: 8rem;
       border-radius: 50%;
@@ -37,7 +37,7 @@
       filter: blur(90px);
     }
     &::after {
-      top: 47%;
+      top: 55%;
       left: 58%;
       background-color: $pink-blur;
     }
@@ -81,9 +81,11 @@
     position: relative;
     display: block;
     color: $white-50;
-    // padding: 1.125rem;
     font-size: 1.125rem;
-  
+    transition: $transition;
+    &:hover, &:focus {
+      color: $white;
+    }
   }
 
   &__footer{
