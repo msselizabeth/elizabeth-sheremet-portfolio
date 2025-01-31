@@ -1,0 +1,24 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.section-title{
+    position: relative;
+    padding: 1.5rem 0;
+     text-align: center;
+     background-color: $blue-800;
+     color: $white;
+
+     &::after, &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 1px;
+        border-bottom: 1px solid $blue-700;
+     }
+
+     &::before{
+        top: 0;
+     }
+}
