@@ -166,30 +166,30 @@
 .right {
   transform: rotateY(90deg) translateZ(100px);
   @include desktop {
-    transform: rotateY(0deg) translateZ(125px);
+    transform: rotateY(90deg) translateZ(125px);
   }
 }
 .back {
   transform: rotateY(180deg) translateZ(100px);
   @include desktop {
-    transform: rotateY(0deg) translateZ(125px);
+    transform: rotateY(180deg) translateZ(125px);
   }
 }
 .left {
   transform: rotateY(-90deg) translateZ(100px);
   @include desktop {
-    transform: rotateY(0deg) translateZ(125px);
+    transform: rotateY(-90deg) translateZ(125px);
   }
 }
 .top {
   transform: rotateX(90deg) translateZ(100px);
   @include desktop {
-    transform: rotateY(0deg) translateZ(125px);
+    transform: rotateX(90deg) translateZ(125px);
   }
 }
 .bottom {
   transform: rotateX(-90deg) translateZ(100px);
   @include desktop {
-    transform: rotateY(0deg) translateZ(125px);
+    transform: rotateX(-90deg) translateZ(125px);
   }
 }
