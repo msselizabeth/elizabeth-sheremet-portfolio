@@ -27,15 +27,30 @@
       justify-content: center;
       align-items: center;
       gap: 1.5rem;
-      
-
+    
       &::before {
-        top: 25%;
-        left: 35%;
+        top: 2%;
+        left: 45%;
       }
       &::after {
-        top: 55%;
-        left: 55%;
+        top: 18%;
+        left: 75%;
+      }
+    }
+    @include desktop {
+      &::before,
+      &::after {
+        width: 10rem;
+        height: 10rem;
+        filter: blur(110px);
+      }
+      &::before {
+        top: 5%;
+        left: 42%;
+      }
+      &::after {
+        top: 16%;
+        left: 62%;
       }
     }
   }
@@ -92,7 +107,7 @@
         margin-left: 0.75rem;
       }
       @include desktop {
-          width: 30%;
+          width: 35%;
           float: none;
           margin: 0;
       }
@@ -107,12 +122,15 @@
       @include tablet {
         width: 55%;
       }
+      @include desktop {
+        width: 65%;
+      }
     }
    
     &-part-two{
       margin-top: 1rem;
       @include desktop {
-        width: 55%;
+        width: 65%;
         margin-top: 1.5rem;
       }
     }
@@ -150,16 +168,16 @@
   height: auto;
   border-radius: 50%;
   border: 6px solid $gray-800;
-
   &__container {
     width: 80%;
     margin: 0 auto;
+    z-index: 100;
     @include tablet {
       width: 45%;
       margin: 0;
     }
     @include desktop {
-      width: 30%;
+      width: 35%;
     }
   }
 }
