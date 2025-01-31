@@ -5,34 +5,38 @@ import "./Header.scss";
 export default function Header() {
   return (
     <header className="header">
-     <Logo />
-
+      <Logo />
       <MobileMenu />
 
-      {/* <nav className="header__nav">
+      <nav className="header__nav">
         <ul className="header__list">
           <li>
-            <a href="#home" className="header__link">
-              _hello
-            </a>
-          </li>
-          <li>
-            <a href="#about" className="header__link">
-              _about-me
+            <a href="/" className="header__link">
+              Home
             </a>
           </li>
           <li>
             <a href="#skills" className="header__link">
-              _skills
+              Skills
             </a>
           </li>
           <li>
             <a href="#projects" className="header__link">
-              _projects
+              Projects
+            </a>
+          </li>
+          <li>
+            <a href="#education" className="header__link">
+              Education
+            </a>
+          </li>
+          <li>
+            <a href="#contacts" className="header__link">
+              Contacts
             </a>
           </li>
         </ul>
-      </nav> */}
+      </nav>
     </header>
   );
 }
