@@ -1,3 +1,4 @@
+import { RiContactsFill, RiSparkling2Fill } from "@remixicon/react";
 import "./Hero.scss";
 
 export default function Hero() {
@@ -35,9 +36,11 @@ export default function Hero() {
 
           <div className="hero__action-container">
             <a href="/#projects" className="hero__action-link">
+              <RiSparkling2Fill size={20}/>
               Projects
             </a>
             <a href="/#contacts" className="hero__action-link">
+              <RiContactsFill size={20}/>
               Contacts
             </a>
           </div>
