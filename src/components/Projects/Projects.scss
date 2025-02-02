@@ -5,17 +5,13 @@
   &__list {
     display: flex;
     flex-direction: column;
-    gap: 1.25rem;
+    gap: 2rem;
     @include tablet {
-      flex-direction: row;
-      flex-wrap: wrap;
-      gap: 1.5rem;
+      gap: 2.5rem;
     }
     @include desktop {
-      flex-direction: row;
-      gap: 3.5rem;
+      gap: 4rem;
     }
   }
-  
 }
 

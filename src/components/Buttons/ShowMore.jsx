@@ -2,8 +2,10 @@ import "./Buttons.scss";
 
 export default function ShowMore({ onClick, isExpanded }) {
   return (
-    <button className="show-more-button" onClick={onClick}>
+    <div className="show-more__container">
+       <button className="show-more__button" onClick={onClick}>
       {isExpanded ? "Show less" : "Show more"}
     </button>
+   </div>
   );
 }
