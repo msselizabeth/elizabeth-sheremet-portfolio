@@ -58,10 +58,7 @@ export default function Hero() {
         </div>
         <div className="hero__content hero__content-part-two">
           <p className="hero__content-text">
-            I hold a Master’s degree in Computer Science and have completed
-            full-stack development course and software engineering bootcamp.
-            With over two years of experience as a web developer, I've got
-            valuable skills in both development and teamwork.
+          I hold Master’s degree in Computer Science and have completed full-stack development course and software engineering bootcamp. With over two years of experience as software developer, I’ve gained valuable skills in development and teamwork.
           </p>
           <p className="hero__content-text">
             Furthermore, five years of experience in digital marketing and sales

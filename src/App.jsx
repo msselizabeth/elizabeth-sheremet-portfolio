@@ -1,6 +1,7 @@
 // import ThemeToggle from "./components/ToggleTheme/ToggleTheme";
 
-import About from "./components/About/About";
+import Contacts from "./components/Contacts/Contacts";
+import Education from "./components/Education/Eductaion";
 import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
 import Hero from "./components/Hero/Hero";
@@ -15,6 +16,8 @@ const App = () => {
         <Hero />
         <Skills />
         <Projects />
+        {/* <Education />
+        <Contacts /> */}
       </main>
       <Footer />
     </>

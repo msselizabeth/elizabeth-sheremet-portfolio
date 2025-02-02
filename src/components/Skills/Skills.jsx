@@ -6,11 +6,11 @@ import {
   RiMacFill,
   RiServerFill,
 } from "@remixicon/react";
-
 import StackIcon from "tech-stack-icons";
 import SectionTitle from "../SectionTitle/SectionTitle";
 import { useRef } from "react";
 import { useAnimationFrame } from "motion/react";
+import FadeInSection from "../FadeInSection/FadeInSection";
 
 export default function Skills() {
   const ref = useRef(null);
@@ -24,6 +24,7 @@ export default function Skills() {
   return (
     <>
       <SectionTitle title="Skills" />
+      <FadeInSection>
       <section id="skills">
         <div className="skills">
           {/*3D cube */}
@@ -280,6 +281,7 @@ export default function Skills() {
           </video>
         </div>
       </section>
+     </FadeInSection>
     </>
   );
 }
