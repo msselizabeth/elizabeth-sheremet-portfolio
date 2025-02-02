@@ -1,14 +1,12 @@
 import ShowMore from "../Buttons/ShowMore";
 import "./ProjectItem.scss";
 import { useEffect, useRef, useState } from "react";
-import { RiLinksFill, RiPlayLargeFill } from "@remixicon/react";
-// import StackIcon from "tech-stack-icons";
+import { RiExternalLinkFill, RiPlayLargeFill } from "@remixicon/react";
 import techIcons from "../../data/tech-icons";
 
 export default function ProjectItem({ project, index }) {
   const [isExpanded, setIsExpanded] = useState(false);
   const videoRef = useRef(null);
-  const [videoEnded, setVideoEnded] = useState(false);
 
   const toggleDescription = () => {
     setIsExpanded((prevState) => !prevState);
@@ -23,7 +21,7 @@ export default function ProjectItem({ project, index }) {
           videoRef.current?.pause();
         }
       },
-      { threshold: 0.5 } 
+      { threshold: 0.25 } 
     );
 
     if (videoRef.current) {
@@ -38,13 +36,6 @@ export default function ProjectItem({ project, index }) {
   }, []);
 
   const handleVideoEnd = () => setVideoEnded(true);
-  const handleReplay = () => {
-    if (videoRef.current) {
-      videoRef.current.currentTime = 0;
-      videoRef.current.play();
-      setVideoEnded(false);
-    }
-  };
 
   return (
     <li className="project__item">
@@ -65,18 +56,13 @@ export default function ProjectItem({ project, index }) {
               src={project.video}
               autoPlay
               muted
+              loop
               playsInline
               onEnded={handleVideoEnd}
               className="demo__video">
               The video aren't supported by your browser.
             </video>
-            {videoEnded && (
-              <div className="demo__video-overlay">
-                <button onClick={handleReplay} className="demo__video-icon">
-                  <RiPlayLargeFill size={44} />
-                </button>
-              </div>
-            )}
+           
           </div>
         </div>
 
@@ -85,11 +71,11 @@ export default function ProjectItem({ project, index }) {
             <h3 className="project__title">{project.title}</h3>
             {project.link && (
               <a href={project.link} className="project__link">
-                Visit <RiLinksFill size={20} />
+                Go to <RiExternalLinkFill size={20} />
               </a>
             )}
           </div>
-          <p>Tech stack</p>
+          <p className="project__tech-title">Tech stack</p>
           <div className="project__tech-list">
             {project.techStack.map((tech) => (
               <span key={tech} className="project__icon-container">
@@ -98,6 +84,9 @@ export default function ProjectItem({ project, index }) {
             ))}
           </div>
 
+          
+
+          <p className="project__description-title">About project</p>
           <p
             className={`project__description-text ${
               isExpanded ? "expanded" : ""

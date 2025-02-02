@@ -4,6 +4,7 @@ export const projects = [
         image: "/images/gastro-guide.png",
         alt: "Gastro guide - culinary guide through the world",
         video: "/gg-demo-mob.webm",
+        github: "",
         link: "https://gastronomic-guide.vercel.app/",
         techStack: ["js","react", "next", "mongo",  "openai", "node", "nextauth", "css", "sass", "vercel", "aws"],
         description:
@@ -13,7 +14,8 @@ export const projects = [
         title: "Iggy Discover",
         image: "/images/iggy.png",
         alt: "Iggy Discover - AI search tool",
-        video: "/gg-demo-mob.webm",
+        video: "/ig-demo.webm",
+       
         link: "",
         techStack: ["js", "react", "mysql", "node", "css", "sass", "express", "vite"],
         description:
@@ -24,7 +26,7 @@ export const projects = [
         image: "/images/culinary-notes.png",
         alt: "Culinary Notes - AI search tool",
         video: "/ca-demo.webm",
-
+        github: "",
         link: "https://culinary-notes.vercel.app/",
         techStack: ["js", "react", "css", "sass", "vite"],
         description:

@@ -1,18 +1,46 @@
 import { RiContactsFill, RiSparkling2Fill } from "@remixicon/react";
 import "./Hero.scss";
+import { useEffect, useRef } from "react";
 
 export default function Hero() {
+  const videoRef = useRef(null);
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          videoRef.current?.play();
+        } else {
+          videoRef.current?.pause();
+        }
+      },
+      { threshold: 0.25 }
+    );
+
+    if (videoRef.current) {
+      observer.observe(videoRef.current);
+    }
+
+    return () => {
+      if (videoRef.current) {
+        observer.unobserve(videoRef.current);
+      }
+    };
+  }, []);
+  const handleVideoEnd = () => setVideoEnded(true);
+
   return (
     <section className="section hero">
       {/* Hero part 1 */}
       <div className="hero__part-one">
         <div className="video__container">
           <video
+            ref={videoRef}
             src="/portfolio-video.webm"
             autoPlay
             loop
             muted
             playsInline
+            onEnded={handleVideoEnd}
             className="video">
             The video aren't supported by your browser.
           </video>
@@ -36,11 +64,11 @@ export default function Hero() {
 
           <div className="hero__action-container">
             <a href="/#projects" className="hero__action-link">
-              <RiSparkling2Fill size={20}/>
+              <RiSparkling2Fill size={20} />
               Projects
             </a>
             <a href="/#contacts" className="hero__action-link">
-              <RiContactsFill size={20}/>
+              <RiContactsFill size={20} />
               Contacts
             </a>
           </div>
@@ -58,7 +86,10 @@ export default function Hero() {
         </div>
         <div className="hero__content hero__content-part-two">
           <p className="hero__content-text">
-          I hold Master’s degree in Computer Science and have completed full-stack development course and software engineering bootcamp. With over two years of experience as software developer, I’ve gained valuable skills in development and teamwork.
+            I hold Master’s degree in Computer Science and have completed
+            full-stack development course and software engineering bootcamp.
+            With over two years of experience as software developer, I’ve gained
+            valuable skills in development and teamwork.
           </p>
           <p className="hero__content-text">
             Furthermore, five years of experience in digital marketing and sales
