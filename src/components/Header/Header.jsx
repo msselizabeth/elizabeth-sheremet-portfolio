@@ -26,8 +26,8 @@ export default function Header() {
             </a>
           </li>
           <li>
-            <a href="#education" className="header__link">
-              Education
+            <a href="#background" className="header__link">
+              Background
             </a>
           </li>
           <li>

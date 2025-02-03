@@ -52,10 +52,10 @@ export default function MobileMenu() {
                 </li>
                 <li>
                   <a
-                    href="#education"
+                    href="#background"
                     onClick={closeMenu}
                     className="mobile-menu__link">
-                    Education
+                    Background
                   </a>
                 </li>
                 <li>

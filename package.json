@@ -12,8 +12,10 @@
   "dependencies": {
     "@remixicon/react": "^4.6.0",
     "motion": "^12.0.6",
+    "prop-types": "^15.8.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-vertical-timeline-component": "^3.5.3",
     "remixicon": "^4.6.0",
     "sass": "^1.83.0",
     "tech-stack-icons": "^2.1.0"
