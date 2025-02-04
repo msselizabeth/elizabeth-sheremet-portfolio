@@ -35,6 +35,9 @@
   &__link {
     display: block;
     color: $white-50;
-    // padding: 1.5rem;
+    transition: $transition;
+    &:hover, &:focus {
+      color: $white;
+    }
   }
 }
