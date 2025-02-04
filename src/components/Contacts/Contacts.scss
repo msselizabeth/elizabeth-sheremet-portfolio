@@ -1,0 +1,68 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+
+.contacts {
+  z-index: 10;
+  &__container{
+    @include tablet {
+        display: flex;
+        justify-content: center;
+        gap: 2.5rem;
+    }
+    @include desktop{
+        gap: 7rem;
+    }
+  }
+  &__social{
+    margin-bottom: 1rem;
+    @include tablet{
+        margin: 0;
+        padding: 2rem;
+    }
+  }
+  &__title {
+    margin-bottom: 0.5rem;
+    text-align: center;
+    font-weight: 500;
+  }
+  &__list {
+    @include flex-center;
+    gap: 1rem;
+  }
+
+  &__link {
+    color: $white;
+    transition: $transition;
+    &:hover,
+    &:focus {
+      color: $blue-500;
+    }
+  }
+
+  &__email {
+    @include flex-center;
+    gap: 0.25rem;
+    color: $white;
+    font-size: 1rem;
+    transition: $transition;
+    &:hover,
+    &:focus {
+      color: $blue-500;
+    }
+
+    &-container {
+      margin-bottom: 1rem;
+      @include tablet{
+        margin: 0;
+        padding: 2rem;
+    }
+    }
+  }
+
+  &__location {
+      @include flex-center;
+      gap: 0.25rem;
+      color: $pink;
+  }
+}
