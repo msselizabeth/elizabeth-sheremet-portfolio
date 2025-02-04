@@ -28,7 +28,7 @@
     &::after {
       content: "";
       position: absolute;
-      top: 35%;
+      top: 30%;
       left: 12%;
       width: 8rem;
       height: 8rem;
@@ -37,7 +37,7 @@
       filter: blur(90px);
     }
     &::after {
-      top: 55%;
+      top: 50%;
       left: 58%;
       background-color: $pink-blur;
     }
