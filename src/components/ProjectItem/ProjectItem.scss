@@ -119,12 +119,12 @@
   &__link {
     @include flex-center;
     gap: 0.25rem;
-    color: $blue-500;
+    color: $pink;
     font-weight: 600;
     transition: $transition;
     &:hover,
     &:focus {
-      color: $white;
+      color: $purple;
     }
     @include tablet {
       font-size: 1.125rem;
