@@ -24,6 +24,7 @@ const techIcons = {
     />
   ),
   js: <StackIcon name="js" className="project__icon" />,
+  ts: <StackIcon name="typescript" className="project__icon" />,
   mysql: <StackIcon name="mysql" className="project__icon" />,
   tailwindcss: <StackIcon name="tailwindcss" className="project__icon" />,
   express: (
