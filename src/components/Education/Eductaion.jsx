@@ -19,7 +19,7 @@ const timelineData = [
   },
   {
     date: "MAY 2023 - NOV 2024",
-    course: "Front-end developer",
+    course: "Full-stack developer",
     doc: "Remote",
     school: "NextPage - Kyiv, Ukraine",
     icon: <RiBriefcaseFill size={34} />,
