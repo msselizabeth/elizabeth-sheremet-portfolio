@@ -23,22 +23,22 @@ export default function Contacts() {
             <h3 className="contacts__title">Find me on social media:</h3>
             <ul className="contacts__list">
               <li>
-                <a href="/" className="contacts__link">
+                <a href="https://www.linkedin.com/in/elizabethsheremet/" className="contacts__link" target="_blank">
                   <RiLinkedinFill size={30} />
                 </a>
               </li>
               <li>
-                <a href="/" className="contacts__link">
+                <a href="https://github.com/msselizabeth" className="contacts__link" target="_blank">
                   <RiGithubFill size={30} />
                 </a>
               </li>
               <li>
-                <a href="/" className="contacts__link">
+                <a href="https://www.instagram.com/elizabeth_sheremet/" className="contacts__link" target="_blank">
                   <RiInstagramFill size={30} />
                 </a>
               </li>
               <li>
-                <a href="/" className="contacts__link">
+                <a href="https://www.facebook.com/elizabethsheremet" className="contacts__link" target="_blank">
                   <RiFacebookFill size={30} />
                 </a>
               </li>

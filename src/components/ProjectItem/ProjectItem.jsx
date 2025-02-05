@@ -70,7 +70,7 @@ export default function ProjectItem({ project, index }) {
           <div className="project__name-container">
             <h3 className="project__title">{project.title}</h3>
             {project.link && (
-              <a href={project.link} className="project__link">
+              <a href={project.link} className="project__link" target="_blank">
                 Go to <RiExternalLinkFill size={20} />
               </a>
             )}
