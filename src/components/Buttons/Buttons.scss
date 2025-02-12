@@ -20,3 +20,35 @@
   }
 
 }
+
+.load-more {
+  color: $white;
+  font-family: "Poppins", sans-serif;
+  cursor: pointer;
+  // color: $blue-500;
+  padding: .75rem;
+  background-color: $purple;
+  border-radius: 1.25rem;
+  text-decoration: underline;
+  transition: $transition;
+  &:hover, &:focus {
+      background-color: $pink;
+  }
+  @include tablet{
+      font-size: 1rem;
+  }
+  @include desktop{
+      padding: .75rem 1rem;
+  }
+
+   &__container{
+      @include flex-center;
+      margin-top: .75rem;
+      @include tablet{
+          margin-top: 1.25rem;
+      }
+      @include desktop{
+          margin-top: 1.75rem;
+      }
+   }
+}
