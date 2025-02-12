@@ -7,6 +7,7 @@ import {
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 import { useState } from "react";
+import LoadMore from "../Buttons/LoadMore";
 
 const timelineData = [
   {
@@ -106,14 +107,7 @@ export default function Education() {
 
       
         {visibleItems < timelineData.length && (
-          <div className="load-more__container">
-            <button
-              onClick={loadMore}
-              className="load-more"
-            >
-              Load More
-            </button>
-          </div>
+          <LoadMore loadMore={loadMore}/>
         )}
       </section>
     </>
