@@ -58,7 +58,7 @@ export default function ProjectItem({ project, index }) {
               muted
               loop
               preload="auto"
-              loading="lazy"
+              poster={project.poster}
               playsInline
               onEnded={handleVideoEnd}
               className="demo__video">

@@ -4,6 +4,7 @@ export const projects = [
         image: "/images/gastro-guide.png",
         alt: "Gastro guide - culinary guide through the world",
         video: "/gg-demo-mob.webm",
+        poster: "/images/gg-poster.png",
         github: "",
         link: "https://gastronomic-guide.vercel.app/",
         techStack: ["js","react", "next", "mongo",  "openai", "node", "nextauth", "css", "sass", "vercel", "aws"],
@@ -13,8 +14,9 @@ export const projects = [
     {
         title: "Katya Rybalka",
         image: "",
-        alt: "Katya Rybalks - food and fishing blogger in Ukraine",
+        alt: "Katya Rybalka - food and fishing blogger in Ukraine",
         video: "/katya-demo.webm",
+        poster: "/images/katya-poster.png",
         github: "",
         link: "https://katya-rybalka.vercel.app/",
         techStack: ["js","react", "next", "css", "sass", "vercel"],
@@ -26,7 +28,7 @@ export const projects = [
         image: "/images/iggy.png",
         alt: "Iggy Discover - AI search tool",
         video: "/ig-demo.webm",
-       
+        poster: "/images/ig-poster.png",
         link: "",
         techStack: ["js", "react", "mysql", "node", "css", "sass", "express", "vite"],
         description:
@@ -37,6 +39,7 @@ export const projects = [
         image: "/images/culinary-notes.png",
         alt: "Culinary Notes - AI search tool",
         video: "/ca-demo.webm",
+        poster: "/images/ca-poster.png",
         github: "",
         link: "https://culinary-notes.vercel.app/",
         techStack: ["js", "react", "css", "sass", "vite"],
@@ -48,6 +51,7 @@ export const projects = [
         image: "",
         alt: "E-commerce",
         video: "/e-com-demo.webm",
+        poster: "/images/e-com-poster.png",
         github: "",
         link: "",
         techStack: ["ts", "react", "next", "tailwindcss", "mysql", "prisma", "aws", "nextauth"],
