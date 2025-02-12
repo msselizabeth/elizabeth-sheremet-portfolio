@@ -175,6 +175,7 @@
   border: 6px solid $white-50;
   &__container {
     width: 80%;
+    height: auto;
     margin: 0 auto;
     z-index: 100;
     @include tablet {

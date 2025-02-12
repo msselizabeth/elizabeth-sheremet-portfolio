@@ -39,6 +39,9 @@ export default function Hero() {
             autoPlay
             loop
             muted
+            preload="auto"
+            loading="lazy"
+            poster="/images/hero-poster.webp"
             playsInline
             onEnded={handleVideoEnd}
             className="video">

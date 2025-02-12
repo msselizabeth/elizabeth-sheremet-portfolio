@@ -21,7 +21,7 @@ export default function ProjectItem({ project, index }) {
           videoRef.current?.pause();
         }
       },
-      { threshold: 0.25 } 
+      { threshold: 0.25 }
     );
 
     if (videoRef.current) {
@@ -57,12 +57,13 @@ export default function ProjectItem({ project, index }) {
               autoPlay
               muted
               loop
+              preload="auto"
+              loading="lazy"
               playsInline
               onEnded={handleVideoEnd}
               className="demo__video">
               The video aren't supported by your browser.
             </video>
-           
           </div>
         </div>
 
@@ -83,8 +84,6 @@ export default function ProjectItem({ project, index }) {
               </span>
             ))}
           </div>
-
-          
 
           <p className="project__description-title">About project</p>
           <p
