@@ -1,5 +1,17 @@
 export const projects = [
     {
+        title: "Class Clarity",
+        image: "",
+        alt: "Class clarity",
+        video: "/cc-demo.webm",
+        poster: "/images/cc-poster.png",
+        github: "",
+        link: "https://classclarity.netlify.app/",
+        techStack: ["js","react", "mongo", "openai", "node",  "css", "sass" , "vite"],
+        description:
+            "The project, developed as part of the Koru Ecosystem Hackathon, aims to simplify the process of tracking student progress. We created a web application that helps teachers record observations, mark key skills, leave comments and ratings, and automatically generate progress reports using AI.",
+    },
+    {
         title: "Gastro Guide",
         image: "/images/gastro-guide.png",
         alt: "Gastro guide - culinary guide through the world",
