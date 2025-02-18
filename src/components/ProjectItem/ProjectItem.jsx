@@ -51,6 +51,7 @@ export default function ProjectItem({ project, index }) {
           />
 
           <div className="demo__container">
+            <div className="demo__video-container">
             <video
               ref={videoRef}
               autoPlay
@@ -66,12 +67,20 @@ export default function ProjectItem({ project, index }) {
               <source src={project.videoMp4} type="video/mp4" />
               The video aren't supported by your browser.
             </video>
+            </div>
           </div>
         </div>
 
         <div className="project__description">
           <div className="project__name-container">
-            <h3 className="project__title">{project.title}</h3>
+            <div>
+              <h3 className="project__title">{project.title}</h3>
+              <p className="project__type">
+                {
+                 project.brand && <img src={project.brand} alt="brand icon" className="project__brand-icon"/>
+                }
+                {project.type}</p>
+            </div>
             {project.link && (
               <a href={project.link} className="project__link" target="_blank">
                 Go to <RiExternalLinkFill size={20} />

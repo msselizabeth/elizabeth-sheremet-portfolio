@@ -66,6 +66,7 @@
       font-size: 1.25rem;
     }
    }
+
     &-text {
       max-height: 4rem;
       overflow: hidden;
@@ -115,6 +116,18 @@
     @include desktop{
       font-size: 1.5rem;
     }
+  }
+  &__type{
+    display: flex;
+    align-items: center;
+    gap: .3125rem;
+    color: $white-50;
+    font-style: italic;
+  }
+  &__brand-icon{
+    display: block;
+    width: 20px;
+    height: 20px
   }
   &__link {
     @include flex-center;
@@ -214,6 +227,7 @@
     position: absolute;
     top: 2px;
     left: 50%;
+   
     transform: translateX(-50%);
     width: 94%;
     height: 98.5%;
@@ -221,31 +235,21 @@
     overflow: hidden;
     border-radius: 2.5rem;
     @include tablet {
-      border-radius: 3.5rem;
+      border-radius: 3rem;
     }
   }
-
+  &__video-container{
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+  }
   &__video {
     width: 100%;
     height: 100%;
+   
+    // margin: 0 auto;
     overflow: hidden;
     object-fit: cover;
-    &-overlay {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translateX(-50%) translateY(-50%);
-      width: 5rem;
-      height: 5rem;
-      border-radius: 50%;
-      background: rgba(0, 0, 0, 0.5);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    &-icon {
-      z-index: 100;
-      color: $white;
-    }
+    
   }
 }
