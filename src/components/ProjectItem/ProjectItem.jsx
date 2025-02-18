@@ -21,7 +21,7 @@ export default function ProjectItem({ project, index }) {
           videoRef.current?.pause();
         }
       },
-      { threshold: 0.25 }
+      { threshold: 0.5 }
     );
 
     if (videoRef.current) {
@@ -53,15 +53,17 @@ export default function ProjectItem({ project, index }) {
           <div className="demo__container">
             <video
               ref={videoRef}
-              src={project.video}
               autoPlay
               muted
               loop
-              preload="auto"
+              preload="metadata"
+              loading="lazy"
               poster={project.poster}
               playsInline
               onEnded={handleVideoEnd}
               className="demo__video">
+              <source src={project.videoWebm} type="video/webm" />
+              <source src={project.videoMp4} type="video/mp4" />
               The video aren't supported by your browser.
             </video>
           </div>

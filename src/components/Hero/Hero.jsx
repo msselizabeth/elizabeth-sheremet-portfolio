@@ -13,7 +13,7 @@ export default function Hero() {
           videoRef.current?.pause();
         }
       },
-      { threshold: 0.25 }
+      { threshold: 0.5 }
     );
 
     if (videoRef.current) {
@@ -35,16 +35,18 @@ export default function Hero() {
         <div className="video__container">
           <video
             ref={videoRef}
-            src="/portfolio-video.webm"
+            
             autoPlay
             loop
             muted
-            preload="auto"
+            preload="metadata"
             loading="lazy"
             poster="/images/hero-poster.webp"
             playsInline
             onEnded={handleVideoEnd}
             className="video">
+            <source src="/videos/portfolio-video.webm" type="video/webm" />
+            <source src="/videos/portfolio-video.mp4" type="video/mp4" />
             The video aren't supported by your browser.
           </video>
         </div>

@@ -32,7 +32,7 @@ export default function Skills() {
           videoRef.current?.pause();
         }
       },
-      { threshold: 0.25 }
+      { threshold: 0.5 }
     );
 
     if (videoRef.current) {
@@ -300,13 +300,17 @@ export default function Skills() {
           <div className="skills__video-container">
             <video
               ref={videoRef}
-              src="/skills-video.mp4"
+             
               autoPlay
+              preload="metadata"
+              loading="lazy"
               loop
               muted
               playsInline
               onEnded={handleVideoEnd}
               className="skills__video">
+                  <source  src="/videos/skills-video.webm" type="video/webm" />
+                  <source  src="/videos/skills-video.mp4" type="video/mp4" />
               The video aren't supported by your browser.
             </video>
           </div>
